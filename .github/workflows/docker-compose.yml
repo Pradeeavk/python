@@ -1,0 +1,10 @@
+version: "v2.20.2"  # Docker Compose version
+
+services:
+  app:
+    image: pradeep243/seppu:latest  # Replace with your Docker Hub image name
+    ports:
+      - "5000:5000"  # Replace with your desired port mapping
+    restart: always
+
+
