@@ -1,10 +1,13 @@
-version: "v2.20.2"  # Docker Compose version
-
+name: workflows
 services:
   app:
-    image: pradeep243/seppu:latest  # Replace with your Docker Hub image name
+    image: pradeep243/seppu:latest
+    networks:
+      - default
     ports:
-      - "5005:5000"  # Replace with your desired port mapping
+      - "5006:5000"
     restart: always
-
+networks:
+  default:
+    name: workflows_default
 
